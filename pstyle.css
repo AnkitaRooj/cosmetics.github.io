@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+:root{
+    --orange:#ffa500;
+  }
+  
+a{
+    text-decoration: none;
+}
+*{
+    font-family: 'Merriweather', serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+  }
+body{
+    /* background-image: url(images/pback.jpg); */
+    background-color:white;
+    background-position: center;
+    background-size: cover;
+}
+.product{
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+.product a{
+    text-decoration: none;
+}
+
+.product a:hover{
+    text-decoration: none;
+} 
+.cbutton{
+    /* border: 0.2rem solid blue; */
+    border: 0.2em solid var(--orange);
+    /* color: #38A3A5; */
+    background:var(--orange);
+    /* color: white; */
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cbutton::before{
+    content: ' ';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    /* to put background-color behind */
+    z-index: -1;
+
+    border: 0.2em solid var(--orange);
+    background:var(--orange);
+    
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.cbutton:hover::before,
+.cbutton:focus::before
+{
+    transform: scaleX(1);
+}
+
+.cbutton{
+    z-index: 1;
+}
+
+.cbutton:hover,
+.cbutton:focus{
+    color: white;
+}
+
+.accordion .contentBx{
+    position: relative;
+    /* margin: 10px 20px; */
+    margin-bottom: 10px;
+}
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    /* background-color: #38A3A5; */
+    border-top: 0.2em solid #38A3A5;
+    cursor: pointer;
+}
+
+.label{
+    margin: 10px;
+}
+
+.detail{
+    padding: 10px;
+}
+
+.star{
+    color: #38A3A5;
+}
